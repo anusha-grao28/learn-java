@@ -3,7 +3,7 @@ package com.anusha.programs;
 import java.util.Scanner;
 
 public class AN002_PalindromeString {
-    public static boolean isPal(String s)
+    public static boolean isStringPalindrome(String s)
     {
         if(s.length() == 0 || s.length() == 1)
             return true;
@@ -14,7 +14,7 @@ public class AN002_PalindromeString {
              * until you string completes or condition fails
              * Function calling itself: Recursion
              */
-            return isPal(s.substring(1, s.length()-1));
+            return isStringPalindrome(s.substring(1, s.length()-1));
 
 
         return false;
@@ -28,7 +28,7 @@ public class AN002_PalindromeString {
         /* If function returns true then the string is
          * palindrome else not
          */
-        if(isPal(string))
+        if(isStringPalindrome(string))
             System.out.println(string + " is a palindrome");
         else
             System.out.println(string + " is not a palindrome");
